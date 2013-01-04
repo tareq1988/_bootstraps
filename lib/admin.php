@@ -51,6 +51,11 @@ class Tareqs_Planet_Admin {
         $settings_fields = array(
             'tp_settings' => array(
                 array(
+                    'name' => 'footer_text',
+                    'label' => __( 'Footer Message', 'wedevs' ),
+                    'type' => 'textarea'
+                ),
+                array(
                     'name' => 'footer_js',
                     'label' => __( 'Footer JS', 'wedevs' ),
                     'type' => 'textarea'
