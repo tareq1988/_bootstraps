@@ -104,10 +104,6 @@ class WeDevs_Bootstrap {
             wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array('jquery'), '20120202', true );
         }
 
-        if ( is_post_type_archive( 'project' ) ) {
-            wp_enqueue_script( 'jquery-isotope', get_template_directory_uri() . '/js/jquery.isotope.min.js', array('jquery', 'theme-script'), '20120202', true );
-        }
-
         wp_enqueue_script( 'jquery-prettyphoto', get_template_directory_uri() . '/js/jquery.prettyPhoto.js', array('jquery', 'theme-script'), '20120202', true );
         wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '20120206', true );
     }
