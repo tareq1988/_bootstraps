@@ -53,7 +53,8 @@ class Tareqs_Planet_Admin {
                 array(
                     'name' => 'footer_text',
                     'label' => __( 'Footer Message', 'wedevs' ),
-                    'type' => 'textarea'
+                    'type' => 'textarea',
+                    'std' => ''
                 ),
                 array(
                     'name' => 'footer_js',

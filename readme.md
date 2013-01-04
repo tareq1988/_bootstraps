@@ -2,7 +2,7 @@
 Yes, another WordPress starter theme, based on another starter theme, oh yeah!!!
 
 ## Why?
-I've built countless times the same thing when creating a theme. I don't want to do tis anymore.
+I've built countless times the same thing when creating a theme. I don't want to do this anymore.
 
 ## What it offeres
 Nothing special that much:
@@ -14,6 +14,7 @@ Nothing special that much:
 * One navigation menu. Yes, it's styled, you don't have to write css for this fracking menubar again.
 * Pagination
 * LESS CSS
+* Font Awesome
 
 ## Screenshot
 ![screenshot](http://f.cl.ly/items/3d3I3X3t3X3j36192L3Q/_bootstraps.png)
