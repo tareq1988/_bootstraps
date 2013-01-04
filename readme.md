@@ -13,6 +13,7 @@ Nothing special that much:
 * Two column (content - *span8*, sidebar - *span4*)
 * One navigation menu. Yes, it's styled, you don't have to write css for this fracking menubar again.
 * Pagination
+* LESS CSS
 
 ## Screenshot
 ![screenshot](http://f.cl.ly/items/3d3I3X3t3X3j36192L3Q/_bootstraps.png)
