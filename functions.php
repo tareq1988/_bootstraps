@@ -19,6 +19,7 @@ class WeDevs_Bootstrap {
         add_action( 'wp_enqueue_scripts', array($this, 'enqueue_scripts') );
         add_action( 'wp_footer', array($this, 'footer_scripts'), 99 );
         add_action( 'widgets_init', array($this, 'widgets_init') );
+        remove_action( 'wp_head', 'wp_generator' );
     }
 
     /**
