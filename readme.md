@@ -15,6 +15,7 @@ Nothing special that much:
 * Pagination
 * LESS CSS
 * Font Awesome
+* Responsive
 
 ## Screenshot
 ![screenshot](http://f.cl.ly/items/3d3I3X3t3X3j36192L3Q/_bootstraps.png)
