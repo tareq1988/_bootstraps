@@ -7,9 +7,9 @@ class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
         $indent = str_repeat( "\t", $depth );
 
         if ( $depth < 1 ) {
-            $output .= "\n$indent<ul class=\"dropdown-menu sub-menu\">\n";
+            $output .= "\n$indent<ul class=\"sub-menu\">\n";
         } else {
-            $output .= "\n$indent<ul class=\"dropdown-menu sub-menu\">\n";
+            $output .= "\n$indent<ul class=\"sub-menu\">\n";
         }
     }
 
