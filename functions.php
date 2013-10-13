@@ -86,17 +86,17 @@ class WeDevs_Bootstrap {
      */
     function enqueue_scripts() {
         // cache the directory path, maybe helpful?
-        $template_directory = get_template_directory_uri();
+        $template_directory = get_template_directory_uri() . '/assets';
 
         // all styles
         wp_enqueue_style( 'bootstrap', $template_directory . '/css/bootstrap.css' );
-        wp_enqueue_style( 'bootstrap-responsive', $template_directory . '/css/bootstrap-responsive.css' );
+        // wp_enqueue_style( 'bootstrap-theme', $template_directory . '/css/bootstrap-theme.css' );
         wp_enqueue_style( 'font-awesome', $template_directory . '/css/font-awesome.css' );
         wp_enqueue_style( 'prettyPhoto', $template_directory . '/css/prettyPhoto.css' );
         wp_enqueue_style( 'style', $template_directory . '/css/style.css' );
 
         // all scripts
-        wp_enqueue_script( 'small-menu', $template_directory . '/js/small-menu.js', array('jquery'), '20120206', true );
+        // wp_enqueue_script( 'small-menu', $template_directory . '/js/small-menu.js', array('jquery'), '20120206', true );
         wp_enqueue_script( 'bootstrap', $template_directory . '/js/bootstrap.min.js', array('jquery'), '20120206', true );
 
         // comment reply on single posts

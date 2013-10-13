@@ -46,6 +46,29 @@ label {
     color: red;
 }
 
+.dropdown-menu {
+    .dropdown-menu {
+        top: 0;
+        left: 100%;
+    }
+
+    .caret {
+        border-top: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 4px solid #000;
+    }
+
+    a:hover .caret {
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    > li > a.dropdown-toggle:hover, li > a.dropdown-toggle:focus {
+        color: #333333;
+    }
+}
+
 .clear {
     clear: both;
 }
@@ -707,11 +730,12 @@ p {
     .widget-title {
         margin-bottom: 5px;
         border-bottom: 1px solid #DDD;
-        padding: 3px 0;
+        padding: 0 0 10px 0;
     }
 
     ul {
         margin-left: 0;
+        padding-left: 0;
         list-style: none;
 
         li {

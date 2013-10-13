@@ -6,5 +6,11 @@
         $("a[rel^='prettyPhoto']").prettyPhoto({
             social_tools: false
         });
+
+        $('ul.dropdown-menu li.dropdown').hover(function() {
+            $(this).addClass('open');
+        }, function() {
+            $(this).removeClass('open');
+        });
     });
 })(jQuery);

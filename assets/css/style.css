@@ -63,6 +63,24 @@ label {
 .required {
   color: red;
 }
+.dropdown-menu .dropdown-menu {
+  top: 0;
+  left: 100%;
+}
+.dropdown-menu .caret {
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #000;
+}
+.dropdown-menu a:hover .caret {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.dropdown-menu > li > a.dropdown-toggle:hover,
+.dropdown-menu li > a.dropdown-toggle:focus {
+  color: #333333;
+}
 .clear {
   clear: both;
 }
@@ -153,105 +171,6 @@ p {
   margin-bottom: 20px;
   position: relative;
 }
-.site-header #navigation {
-  margin: 0;
-  display: block;
-  font-size: 13px;
-}
-.site-header #navigation li {
-  display: block;
-}
-.site-header #navigation li:first-child {
-  border-left: none;
-}
-.site-header #navigation li:last-child {
-  border-right: none;
-}
-.site-header #navigation li a {
-  display: block;
-  color: #FFF;
-  padding: 5px 13px;
-  white-space: nowrap;
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 150%;
-}
-.site-header #navigation li ul.sub-menu {
-  opacity: 0;
-}
-.site-header #navigation li ul.sub-menu li {
-  height: 0;
-}
-.site-header #navigation li:hover {
-  background: #fff;
-}
-.site-header #navigation li:hover a {
-  text-shadow: none;
-  color: #4D4D4D;
-}
-.site-header #navigation li:hover ul.sub-menu {
-  background: #ffffff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  -webkit-transition: opacity .25s ease .1s;
-  -moz-transition: opacity .25s ease .1s;
-  -o-transition: opacity .25s ease .1s;
-  -ms-transition: opacity .25s ease .1s;
-  transition: opacity .25s ease .1s;
-  opacity: 1;
-}
-.site-header #navigation li:hover ul.sub-menu li {
-  border-bottom: 1px solid #dddddd;
-  -webkit-transition: opacity .25s ease .1s;
-  -moz-transition: opacity .25s ease .1s;
-  -o-transition: opacity .25s ease .1s;
-  -ms-transition: opacity .25s ease .1s;
-  transition: opacity .25s ease .1s;
-  height: auto;
-}
-.site-header #navigation li:hover ul.sub-menu li a {
-  background: #fff;
-}
-.site-header #navigation li:hover ul.sub-menu li a:hover {
-  text-shadow: 0 1px 0 #fff;
-}
-.site-header #navigation li:hover ul.sub-menu li:last-child {
-  border-bottom: none;
-}
-.site-header #navigation li:hover ul.sub-menu li.current_page_item a {
-  text-shadow: 0 1px 0 #fff;
-}
-.site-header #navigation li:focus {
-  background: #fff;
-}
-.site-header #navigation .caret {
-  margin-top: 10px;
-  margin-left: 5px;
-  border-top-color: #fff;
-}
-.site-header #navigation > ul > li ul.sub-menu li:hover {
-  background: #fff;
-}
-.site-header #navigation > ul > li > a:hover {
-  text-shadow: none;
-}
-.site-header #navigation > ul > li {
-  border-left: 1px solid #dedede;
-  border-right: 1px solid #bababa;
-}
-.site-header #navigation > ul > li.current-menu-item > a {
-  background: #999999;
-  text-shadow: none;
-  font-weight: bold;
-}
-.site-header #navigation > ul > li.current-menu-item > a:hover {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  background: #fff;
-}
-.site-header #navigation > ul > li.current-menu-item:hover > a {
-  background: #fff;
-}
 /*  --------------------------------------------------
 :: Navigation
 -------------------------------------------------- */
@@ -326,6 +245,100 @@ p {
 }
 #navigation h3 {
   display: none;
+}
+.site-header #navigation {
+  margin: 0;
+  display: block;
+  font-size: 13px;
+}
+.site-header #navigation li {
+  display: block;
+  line-height: 36px;
+}
+.site-header #navigation li:first-child {
+  border-left: none;
+}
+.site-header #navigation li:last-child {
+  border-right: none;
+}
+.site-header #navigation li a {
+  display: block;
+  color: #FFF;
+  padding: 0 13px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.site-header #navigation li ul.sub-menu {
+  opacity: 0;
+}
+.site-header #navigation li ul.sub-menu li {
+  height: 0;
+}
+.site-header #navigation li:hover {
+  background: #f2f2f2;
+}
+.site-header #navigation li:hover a {
+  text-shadow: none;
+}
+.site-header #navigation li:hover ul.sub-menu {
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transition: opacity .25s ease .1s;
+  -moz-transition: opacity .25s ease .1s;
+  -o-transition: opacity .25s ease .1s;
+  -ms-transition: opacity .25s ease .1s;
+  transition: opacity .25s ease .1s;
+  opacity: 1;
+}
+.site-header #navigation li:hover ul.sub-menu li {
+  border-bottom: 1px solid #dddddd;
+  -webkit-transition: opacity .25s ease .1s;
+  -moz-transition: opacity .25s ease .1s;
+  -o-transition: opacity .25s ease .1s;
+  -ms-transition: opacity .25s ease .1s;
+  transition: opacity .25s ease .1s;
+  height: auto;
+}
+.site-header #navigation li:hover ul.sub-menu li a {
+  background: #fff;
+  color: #cccccc;
+}
+.site-header #navigation li:hover ul.sub-menu li a:hover {
+  text-shadow: 0 1px 0 #fff;
+}
+.site-header #navigation li:hover ul.sub-menu li:last-child {
+  border-bottom: none;
+}
+.site-header #navigation li:hover ul.sub-menu li.current_page_item a {
+  text-shadow: 0 1px 0 #fff;
+}
+.site-header #navigation li:focus {
+  background: #fff;
+}
+.site-header #navigation .caret {
+  margin-top: 10px;
+  margin-left: 5px;
+  border-top-color: #fff;
+}
+.site-header #navigation > ul > li > a:hover {
+  text-shadow: none;
+}
+.site-header #navigation > ul > li {
+  border-left: 1px solid #dedede;
+  border-right: 1px solid #bababa;
+}
+.site-header #navigation > ul > li.current-menu-item > a {
+  background: #999999;
+  text-shadow: none;
+  font-weight: bold;
+}
+.site-header #navigation > ul > li.current-menu-item > a:hover {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.site-header #navigation > ul {
+  height: 36px;
 }
 /*--------------------------------------------------
 :: Responsive Menubar
@@ -640,10 +653,11 @@ p {
 .widget .widget-title {
   margin-bottom: 5px;
   border-bottom: 1px solid #DDD;
-  padding: 3px 0;
+  padding: 0 0 10px 0;
 }
 .widget ul {
   margin-left: 0;
+  padding-left: 0;
   list-style: none;
 }
 .widget ul li {

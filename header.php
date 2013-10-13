@@ -48,7 +48,7 @@
         <header id="masthead" class="site-header" role="banner">
             <div class="container">
                 <div class="row">
-                    <div class="span12">
+                    <div class="col-md-12">
                         <hgroup>
                             <h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> <small> - <?php bloginfo( 'description' ); ?></small></a></h1>
                         </hgroup>
@@ -59,12 +59,35 @@
             <div class="menu-container">
                 <div class="container">
                     <div class="row">
-                        <div class="span12">
+                        <div class="col-md-12">
                             <nav role="navigation" class="site-navigation main-navigation clearfix">
                                 <h1 class="assistive-text"><i class="icon-reorder"></i> <?php _e( 'Menu', 'wedevs' ); ?></h1>
                                 <div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'wedevs' ); ?>"><?php _e( 'Skip to content', 'wedevs' ); ?></a></div>
-
-                                <?php wp_nav_menu( array('theme_location' => 'primary', 'container_id' => 'navigation', 'container_class' => 'site-main-menu', 'walker' => new Bootstrap_Walker_Nav_Menu()) ); ?>
+                                    <nav class="navbar navbar-default" role="navigation">
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                            <a class="navbar-brand" href="<?php bloginfo('url')?>"><i class="icon-home"></i></a>
+                                        </div>
+                                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                            <?php
+                                                wp_nav_menu( array(
+                                                    'menu'              => 'primary',
+                                                    'theme_location'    => 'primary',
+                                                    // 'depth'             => 3,
+                                                    'container'         => 'div',
+                                                    'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+                                                    'menu_class'        => 'nav navbar-nav',
+                                                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                                                    'walker'            => new wp_bootstrap_navwalker())
+                                                );
+                                            ?>
+                                        </div>
+                                    </nav>
                             </nav><!-- .site-navigation .main-navigation -->
                         </div><!-- .span12 -->
                     </div><!-- .row -->
