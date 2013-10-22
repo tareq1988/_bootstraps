@@ -6,6 +6,7 @@
     <div class="entry-meta">
         <?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 
+            <i class="icon-calendar"></i>
             <?php wedevs_posted_on(); ?>
             <span class="sep"> | </span>
 
@@ -15,13 +16,14 @@
             if ( $categories_list ) :
                 ?>
                 <span class="cat-links">
+                    <i class="icon-folder-open"></i>
                     <?php printf( __( '%1$s', 'wedevs' ), $categories_list ); ?>
                 </span>
             <?php endif; // End if categories ?>
 
             <?php if ( !post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
                 <span class="sep"> | </span>
-                <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'wedevs' ), __( '1 Comment', 'wedevs' ), __( '% Comments', 'wedevs' ) ); ?></span>
+                <span class="comments-link"><i class="icon-comment-alt"></i> <?php comments_popup_link( __( 'Leave a comment', 'wedevs' ), __( '1 Comment', 'wedevs' ), __( '% Comments', 'wedevs' ) ); ?></span>
             <?php endif; ?>
 
             <?php edit_post_link( __( 'Edit', 'wedevs' ), '<span class="sep"> | </span><span class="edit-link"><i class="icon-edit"></i> ', '</span>' ); ?>
