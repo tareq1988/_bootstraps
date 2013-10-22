@@ -90,9 +90,7 @@ class WeDevs_Bootstrap {
 
         // all styles
         wp_enqueue_style( 'bootstrap', $template_directory . '/css/bootstrap.css' );
-        // wp_enqueue_style( 'bootstrap-theme', $template_directory . '/css/bootstrap-theme.css' );
         wp_enqueue_style( 'font-awesome', $template_directory . '/css/font-awesome.css' );
-        wp_enqueue_style( 'prettyPhoto', $template_directory . '/css/prettyPhoto.css' );
         wp_enqueue_style( 'style', $template_directory . '/css/style.css' );
 
         // all scripts
