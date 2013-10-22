@@ -127,10 +127,10 @@ function wedevs_content_nav( $nav_id ) {
         <?php if ( is_single() ) : // navigation links for single posts  ?>
 
             <li class="previous">
-                <?php previous_post_link( '<div class="nav-previous">%link</div>', _x( '&larr;', 'Previous post link', 'wedevs' ) . ' %title' ); ?>
+                <?php previous_post_link( '%link', _x( '&larr;', 'Previous post link', 'wedevs' ) . ' %title' ); ?>
             </li>
             <li class="next">
-                <?php next_post_link( '<div class="nav-next">%link</div>', '%title ' . _x( '&rarr;', 'Next post link', 'wedevs' ) ); ?>
+                <?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'wedevs' ) ); ?>
             </li>
 
         <?php endif; ?>
