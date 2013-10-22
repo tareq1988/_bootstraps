@@ -413,7 +413,7 @@ p {
   line-height: 25px;
 }
 .site-content .entry-header .entry-title {
-  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid #dddddd;
   padding-bottom: 7px;
   font-weight: bold;
   line-height: 130%;
@@ -433,12 +433,18 @@ p {
   border-bottom: 1px solid #c4c4c4;
 }
 .site-content .entry-meta {
-  margin-bottom: 10px;
-  font-size: 15px;
-  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 13px;
 }
 .site-content .entry-meta .sep {
   color: #c4c4c4;
+}
+.site-content footer.entry-meta {
+  padding-top: 10px;
+  border-top: 1px solid #dddddd;
+}
+.single .site-content article {
+  padding-bottom: 0;
 }
 /*--------------------------------------------------
 :: Navigation
@@ -479,10 +485,8 @@ p {
 }
 #comments #respond {
   padding: 20px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
   margin-bottom: 20px;
+  background: #F0F0F0;
 }
 #comments #respond #cancel-comment-reply-link {
   color: #fff;
@@ -502,6 +506,7 @@ p {
   -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ccc;
 }
 #comments #respond input:focus,
 #comments #respond textarea:focus {
@@ -510,33 +515,38 @@ p {
   box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.25);
   border-color: #ccc;
 }
+#comments #respond input[type=submit] {
+  border: none;
+  color: #fff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 #comments #respond input[type=text] {
   width: 43%;
   padding: 5px 10px;
 }
 #comments #respond textarea#comment {
-  width: 70%;
+  width: 80%;
   padding: 10px;
 }
 #comments #respond .form-submit {
   margin: 15px 0;
 }
-#comments #respond .form-tags-toggle {
-  cursor: pointer;
-}
-#comments #respond .form-tags-toggle .label {
-  font-size: 10px;
-  padding: 3px 4px;
+#comments #respond .form-allowed-tags {
+  font-size: 12px;
 }
 #comments #respond code {
   display: block;
+  white-space: normal;
+  font-size: 11px;
 }
 #comments ol.commentlist {
   margin: 10px 0;
   list-style: none;
+  padding-left: 0;
 }
 #comments ol.commentlist #respond {
-  background: #F0F0F0;
   border-top: 1px solid #fff;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -557,8 +567,8 @@ p {
   border-radius: 500px;
   float: left;
   padding: 3px;
-  height: 75px;
-  width: 75px;
+  height: 81px;
+  width: 81px;
   margin: 0 10px 0 0;
 }
 #comments ol.commentlist li article.comment .comment-avatar img.avatar {
