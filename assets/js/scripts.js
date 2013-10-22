@@ -1,7 +1,7 @@
 (function($){
     $(function($) {
         //comment submit button
-        $('#respond').find('input[type=submit]').addClass('btn theme-btn');
+        $('#respond').find('input[type=submit]').addClass('btn btn-primary');
 
         $("a[rel^='prettyPhoto']").prettyPhoto({
             social_tools: false
