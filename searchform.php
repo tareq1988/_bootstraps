@@ -7,7 +7,11 @@
  */
 ?>
 <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-    <label for="s" class="assistive-text"><?php _e( 'Search', 'wedevs' ); ?></label>
-    <input type="text" class="field" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" id="s" placeholder="<?php esc_attr_e( 'Search &hellip;', 'wedevs' ); ?>" />
-    <input type="submit" class="submit btn btn-primary" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'wedevs' ); ?>" />
+    <div class="input-group">
+        <input type="text" class="form-control" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" id="s" placeholder="<?php esc_attr_e( 'Search &hellip;', 'wedevs' ); ?>" />
+
+        <span class="input-group-btn">
+            <button class="btn btn-primary" id="searchsubmit" type="button"><?php esc_attr_e( 'Search', 'wedevs' ); ?></button>
+        </span>
+    </div><!-- /input-group -->
 </form>
